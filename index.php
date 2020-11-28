@@ -31,12 +31,12 @@
 		error_reporting(0);
 		$host = "Localhost";
 		$user = "dev";
-		$pass = "19862010";
-		$database = "crdv_db";
+		$pass = "";
+		$database = "";
 
 		$conexao = mysqli_connect($host, $user, $pass, $database) or die("<p>Cann't connect with database.</p>");
 		mysqli_set_charset($conexao, "utf8")  == true ? : die("Charset canno't be defined.");
-		$sql = "SELECT * FROM crdv_users";
+		$sql = "SELECT * FROM users";
 		$resultados = mysqli_query($conexao,$sql);
 		echo "<table class=\"table table-dark table-hover\">";
 		echo "<tr>";
